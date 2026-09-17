@@ -4,11 +4,14 @@
     {
         static void Main(string[] args)
         {
-            ISalvavel doc = new Documento();
-            ISalvavel foto = new Foto();
+            Espada minhaEspada = new Espada("Espada Longa", 50);
+            Arco meuArco = new Arco("Arco Recurvo", 40);
 
-            doc.Salvar();
-            foto.Salvar();
+            minhaEspada.ExibirInfo();
+            Console.WriteLine($"Ataque Crítico: {minhaEspada.CalcularAtaqueCritico()}\n");
+
+            meuArco.ExibirInfo();
+            Console.WriteLine($"Ataque Crítico: {meuArco.CalcularAtaqueCritico()}");
         }
     }
 }
