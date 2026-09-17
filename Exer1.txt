@@ -1,0 +1,35 @@
+public class Program
+    {
+        static void Main(string[] args)
+        {
+            ISalvavel doc = new Documento();
+            ISalvavel foto = new Foto();
+
+            doc.Salvar();
+            foto.Salvar();
+        }
+    }
+
+
+    public interface ISalvavel
+    {
+        void Salvar();
+    }
+
+
+    public class Documento : ISalvavel
+    {
+        public void Salvar()
+        {
+            Console.WriteLine("Salvando o documento em formato .doc");
+        }
+    }
+
+
+    public class Foto : ISalvavel
+    {
+        public void Salvar()
+        {
+            Console.WriteLine("Salvando a foto em formato .jpg");
+        }
+    }
